@@ -19,10 +19,8 @@ import java.time.Instant;
 public class TokenController {
 
     private final JwtEncoder jwtEncoder;
-
     private final UserRepository userRepository;
-
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public TokenController(JwtEncoder jwtEncoder,
                            UserRepository userRepository,
