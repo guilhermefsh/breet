@@ -1,6 +1,8 @@
 package fshproject.breet.entities;
 
+import fshproject.breet.dto.LoginRequest;
 import jakarta.persistence.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Set;
 import java.util.UUID;
@@ -58,5 +60,9 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public boolean isLoginCorret(LoginRequest loginRequest, PasswordEncoder passwordEncoder) {
+        return passwordEncoder.matches(loginRequest.password(), this.password);
     }
 }
