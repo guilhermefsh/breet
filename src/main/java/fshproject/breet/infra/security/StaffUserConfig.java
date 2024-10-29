@@ -15,9 +15,7 @@ import java.util.Set;
 public class StaffUserConfig implements CommandLineRunner {
 
     private final RoleRepository roleRepository;
-
     private final UserRepository userRepository;
-
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public StaffUserConfig(BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepository roleRepository, UserRepository userRepository) {
